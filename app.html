@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="bg-total-container" id="sectionHomePage">
+        <div class="d-flex flex-column">
+            <div class="text-center">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/software-developer-img.png" class="my-project-image" />
+            </div>
+            <h1 class="home-heading">My Projects</h1>
+            <p class="home-paragraph">These are my some static, responsive and dynamic websites projects that I have developed using HTML, CSS, Bootstrap Javascript and React.js.</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="home-heading-web text-center">Static Websites </p>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <img onclick="display('sectionFirstPage')" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/advanced-technologies-img.png" class="home-image-size" />
+                    <h1 class="paragraph">VR Box</h1>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <img onclick="display('sectionpodcastHomePage')" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/podcasts-bg.png" class="home-image-size" />
+                    <h1 class="paragraph">podcasts</h1>
+                </div>
+
+                <div class="col-12 col-md-4 text-center">
+                    <img onclick="display('sectionhomepageBooks')" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/book-apj-img.png" class="home-image-size-apj" />
+                    <h1 class="paragraph">Popular Books</h1>
+                </div>
+                <div class="col-12">
+                    <p class="home-heading-web text-center">Dynamic Websites </p>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <img onclick="display('sectionNewsPaperPage')" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/sum-of-two-numbers-img.png" class="home-image-size" />
+                    <h1 class="paragraph">Addition Game</h1>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <img onclick="display('sectionWikipedia')" src="https://i.imgur.com/hlCgT0C.jpg" class="home-image-size" />
+                    <h1 class="paragraph">Wikipedia</h1>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <a href="https://ramappointment.ccbp.tech/">
+                        <img src="https://www.jotform.com/blog/wp-content/uploads/2020/01/11-appointment-scheduling-apps-for-2020.png" class="home-image-size" />
+                    </a>
+                    <h1 class="paragraph">Appointment</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="sectionFirstPage">
+        <div class="background d-flex flex-column justify-content-end">
+            <div class="card-container">
+                <h1 class="heading">VR Headset</h1>
+                <p class="paragraph">A virtual reality headset is a head-mounted device that provides virtual reality for the wearer. Virtual reality (VR) headsets are widely used with video games but they are also used in other applications, including simulators and trainers.</p>
+                <div class="d-flex flex-row justify-content-center">
+
+                    <button class="learn-more-button" onclick="display('sectionVrHeadset')">View Products</button>
+                    <button class="save-draft-button" onclick="display('sectionHomePage')">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="sectionNewsPaperPage">
+        <div class="text-center">
+            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/sum-of-two-numbers-img.png" class="image-num-game" />
+            <div class="bg-container-num-game pt-5 pb-5">
+                <span id="firstNumber" class="number m-2"></span>
+                <span class="operator m-1">+</span>
+                <span id="secondNumber" class="number m-2"></span>
+                <span class="operator m-1">=</span>
+                <input id="userInput" class="user-input" type="text" />
+                <div class="mt-4 mb-4">
+                    <button id="checkButton" onclick="checkButton()" class="btn btn-primary mr-3">
+                        Check
+                    </button>
+                    <button id="restartButton" onclick="restartButton()" class="btn btn-primary">
+                        Restart
+                    </button>
+                </div>
+                <p id="gameResult" class="game-result"></p>
+            </div>
+        </div>
+        <div class="text-right">
+            <button class="save-draft-button " onclick="display('sectionHomePage')">Back</button>
+        </div>
+    </div>
+
+    <div id="sectionpodcastHomePage">
+        <div class="podcasts-background">
+            <h1 class="podcasts">Podcasts</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-6 col-md-3 text-center" onclick="display('sectionprodcastsPuriJagannadh')">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/puri-jagannadh-img.png" class="image-size " />
+                    <h3 class="image-name">Puri jagannadh</h3>
+                    <p class="image-name-episodes">24Episodes</p>
+                </div>
+                <div class="col-6 col-md-3 text-center" onclick="display('sectionprodcastsTedx')">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tedx-img.png" class="image-size " />
+                    <h3 class="image-name">Tedx talks</h3>
+                    <p class="image-name-episodes">12Episodes</p>
+                </div>
+
+                <div class="col-6 col-md-3 text-center" onclick="display('sectionprodcastsSadhguru')">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/sadhguru-img.png" class="image-size" />
+                    <h3 class="image-name">Sadhguru</h3>
+                    <p class="image-name-episodes">49Episodes</p>
+                </div>
+                <div class="col-6 col-md-3 text-center" onclick="display('sectionprodcastsPurpose')">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/on-purpose-img.png" class="image-size" />
+                    <h3 class="image-name">On Purpose</h3>
+                    <p class="image-name-episodes">49Episodes</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-right">
+            <button class="save-draft-button " onclick="display('sectionHomePage')">Back</button>
+        </div>
+    </div>
+    <div id="sectionprodcastsPuriJagannadh">
+        <div class="top-background-in-puri">
+            <div class="d-flex flex-row">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/puri-jagannadh-img.png" class="image-size" />
+                <div class="d-flex flex-column">
+                    <p class="paragraph-in-puri">podcast</p>
+                    <h2 class="top-sode-heading">Puri Jagannadh Podcast</h2>
+                    <p class="side-puri">The Puri jagannadh Podcast</p>
+                </div>
+            </div>
+        </div>
+        <div class="top-background-in-puri-1">
+            <div class="d-flex flex-row">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/puri-jagannadh-img.png" class="image-size" />
+                <div class="d-flex flex-column">
+                    <h2 class="top-sode-heading-1">Paella</h2>
+                    <p class="paragraph-in-puri-1">Anything happens there it will not cook, ...</p>
+                    <p class="paragraph-in-puri-1">15 min</p>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/puri-jagannadh-img.png" class="image-size" />
+                <div class="d-flex flex-column">
+                    <h2 class="top-sode-heading-1">Mystrious book</h2>
+                    <p class="paragraph-in-puri-1">Anything happens there it will not cook, ...</p>
+                    <p class="paragraph-in-puri-1">15 min</p>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/puri-jagannadh-img.png" class="image-size" />
+                <div class="d-flex flex-column">
+                    <h2 class="top-sode-heading-1">Molecular Gastronomy</h2>
+                    <p class="paragraph-in-puri-1">Anything happens there it will not cook, ...</p>
+                    <p class="paragraph-in-puri-1">12 min</p>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/puri-jagannadh-img.png" class="image-size" />
+                <div class="d-flex flex-column">
+                    <h2 class="top-sode-heading-1">Predator Drone</h2>
+                    <p class="paragraph-in-puri-1">Anything happens there it will not cook, ...</p>
+                    <p class="paragraph-in-puri-1">10 min</p>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-end">
+                <button class="back-button" onclick="display('sectionpodcastHomePage')">Back</button>
+            </div>
+        </div>
+    </div>
+    <div id="sectionprodcastsTedx">
+        <div class="top-background-in-puri">
+            <div class="d-flex flex-row">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tedx-img.png" class="image-size" />
+                <div class="d-flex flex-column">
+                    <p class="paragraph-in-puri">podcast</p>
+                    <h2 class="top-sode-heading">The Tedx podcast</h2>
+                    <p class="side-puri">The Tedx Podcast</p>
+                </div>
+            </div>
+        </div>
+        <div class="top-background-in-puri-1">
+            <div class="d-flex flex-row">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tedx-img.png" class="image-size" />
+                <div class="d-flex flex-column">
+                    <h2 class="top-sode-heading-1">The science of friction</h2>
+                    <p class="paragraph-in-puri-1">Tribology.it's a funny sounding word you might...</p>
+                    <p class="paragraph-in-puri-1">12 min</p>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tedx-img.png" class="image-size" />
+                <div class="d-flex flex-column">
+                    <h2 class="top-sode-heading-1">Unleash you</h2>
+                    <p class="paragraph-in-puri-1">What can we learn from the world's most enduringly...</p>
+                    <p class="paragraph-in-puri-1">8 min</p>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tedx-img.png" class="image-size" />
+                <div class="d-flex flex-column">
+                    <h2 class="top-sode-heading-1">3 Psychological tricks</h2>
+                    <p class="paragraph-in-puri-1">We all want to save more money - but overall...</p>
+                    <p class="paragraph-in-puri-1">10 min</p>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tedx-img.png" class="image-size" />
+                <div class="d-flex flex-column">
+                    <h2 class="top-sode-heading-1">The case for stubborn</h2>
+                    <p class="paragraph-in-puri-1">this decade is a moment of choice unlike any we...</p>
+                    <p class="paragraph-in-puri-1">12 min</p>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-end">
+                <button class="back-button" onclick="display('sectionpodcastHomePage')">Back</button>
+            </div>
+        </div>
+    </div>
+    <div id="sectionprodcastsSadhguru">
+        <div class="top-background-in-puri">
+            <div class="d-flex flex-row">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/sadhguru-img.png" class="image-size" />
+                <div class="d-flex flex-column">
+                    <p class="paragraph-in-puri">podcast</p>
+                    <h2 class="top-sode-heading">The Sadhguru podcast</h2>
+                    <p class="paragraph-in-puri">The Sadhguru Podcast</p>
+                </div>
+            </div>
+        </div>
+        <div class="top-background-in-puri-1">
+            <div class="d-flex flex-row">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/sadhguru-img.png" class="image-size" />
+                <div class="d-flex flex-column">
+                    <h2 class="top-sode-heading-1">Head or heart</h2>
+                    <p class="paragraph-in-puri-1">Sadhguru shares his wisdom on how to make...</p>
+                    <p class="paragraph-in-puri-1">15 min</p>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/sadhguru-img.png" class="image-size" />
+                <div class="d-flex flex-column">
+                    <h2 class="top-sode-heading-1">How to equip yourself</h2>
+                    <p class="paragraph-in-puri-1">What can we learn from the world's most enduringly...</p>
+                    <p class="paragraph-in-puri-1">8 min</p>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/sadhguru-img.png" class="image-size" />
+                <div class="d-flex flex-column">
+                    <h2 class="top-sode-heading-1">How not to get irritated</h2>
+                    <p class="paragraph-in-puri-1">We all want to save more money - but overall...</p>
+                    <p class="paragraph-in-puri-1">15 min</p>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/sadhguru-img.png" class="image-size" />
+                <div class="d-flex flex-column">
+                    <h2 class="top-sode-heading-1">Isha Kriya</h2>
+                    <p class="paragraph-in-puri-1">this decade is a moment of choice unlike any we...</p>
+                    <p class="paragraph-in-puri-1">12 min</p>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-end">
+                <button class="back-button" onclick="display('sectionpodcastHomePage')">Back</button>
+            </div>
+        </div>
+    </div>
+    <div id="sectionprodcastsPurpose">
+        <div class="top-background-in-puri">
+            <div class="d-flex flex-row">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/on-purpose-img.png" class="image-size" />
+                <div class="d-flex flex-column">
+                    <p class="paragraph-in-puri">podcast</p>
+                    <h2 class="top-sode-heading">On Purpose with jay</h2>
+                    <p class="paragraph-in-puri">The Tedx Podcast</p>
+                </div>
+            </div>
+        </div>
+        <div class="top-background-in-puri-1">
+            <div class="d-flex flex-row">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/on-purpose-img.png" class="image-size" />
+                <div class="d-flex flex-column">
+                    <h2 class="top-sode-heading-1">The science of friction</h2>
+                    <p class="paragraph-in-puri-1">Tribology.it's a funny sounding word you might...</p>
+                    <p class="paragraph-in-puri-1">12 min</p>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/on-purpose-img.png" class="image-size" />
+                <div class="d-flex flex-column">
+                    <h2 class="top-sode-heading-1">Unleash you</h2>
+                    <p class="paragraph-in-puri-1">What can we learn from the world's most enduringly...</p>
+                    <p class="paragraph-in-puri-1">8 min</p>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/on-purpose-img.png" class="image-size" />
+                <div class="d-flex flex-column">
+                    <h2 class="top-sode-heading-1">3 Psychological tricks</h2>
+                    <p class="paragraph-in-puri-1">We all want to save more money - but overall...</p>
+                    <p class="paragraph-in-puri-1">10 min</p>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/on-purpose-img.png" class="image-size" />
+                <div class="d-flex flex-column">
+                    <h2 class="top-sode-heading-1">The case for stubborn</h2>
+                    <p class="paragraph-in-puri-1">this decade is a moment of choice unlike any we...</p>
+                    <p class="paragraph-in-puri-1">12 min</p>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-end">
+                <button class="back-button" onclick="display('sectionpodcastHomePage')">Back</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionhomepageBooks">
+        <div class="bg-container-books">
+            <div class="bg-container-popular-book">
+
+
+                <h1 class="main-heading">Popular Book</h1>
+                <div class="card d-flex flex-row">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/book-apj-img.png" class="image1" />
+                    <div class="apj-book">
+                        <p class="paragraph">Wings of fire</p>
+                        <p1 class="bio-description">An Autobiography of Abdul Kalam</p1>
+                        <p class="arun">by Arun Tiwari </p>
+                        <button class=" btn btn-primary button" onclick="display('sectionapjpage')">Read Now</button>
+                    </div>
+                </div>
+                <h1 class="sub-heading">Recommended Books</h1>
+                <div class="chetan-card d-flex flex-row">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/book-chetan-bhagat-img.png" class="chetan-book" />
+                    <div class="apj-book">
+                        <p class="paragraph1">The 3 mistakes of my life</p>
+                        <p1 class="bio-description1">indian author by chetan Bhagat</p1>
+                        <button class=" btn btn-primary button" onclick="display('sectionchetanpage')">Read Now</button>
+                    </div>
+                </div>
+                <div class="chetan-card d-flex flex-row">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/harrypotter-img.png" class="chetan-book" />
+                    <div class="apj-book">
+                        <p class="paragraph1">Harry Potter</p>
+                        <p1 class="bio-description1">and the sorcerer's stone by J.K.Rowling</p1>
+                        <button class=" btn btn-primary button" onclick="display('sectionharrypage')">Read Now</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+
+                    <button class="save-draft-button" onclick="display('sectionHomePage')">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionapjpage">
+        <div class="detail-page">
+            <div class="detail-page-apj">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/book-apj-img.png" class="apj" />
+                <h1 class="wings-heading">Wings of Fire</h1>
+                <p class="bio-description1">by Arun Tiwari</p>
+                <p1 class="apj-about">Every common man who by his sheerr grift and hard work acheives success shoulld share
+                    his story his with the rest for they may find inspiration and strngth to go <br />
+                    on,in his story .the 'Wings of fire' is one of the such autobiography by vistionary scientista Dr.APJ Abdul Kalam</p1>
+                <div class="d-flex flex-row justify-content-center">
+                    <button class="btn btn-warning m-3" onclick="display('sectionhomepageBooks')">back</button>
+                    <button class="btn btn-primary m-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionchetanpage">
+        <div class="detail-page">
+            <div class="detail-page-apj">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/book-chetan-bhagat-img.png" class="apj" />
+
+
+                <h1 class="wings-heading">The 3 Mistakes of my life</h1>
+                <p class="bio-description1">by chetan Bhagat</p>
+                <p1 class="apj-about">Every common man who by his sheerr grift and hard work acheives success shoulld share
+                    his story his with the rest for they may find inspiration and strngth to go
+                    on,in his story .the 'Wings of fire' is one of the such autobiography by vistionary scientista Dr.APJ Abdul Kalam</p1>
+                <div class="d-flex flex-row justify-content-center">
+                    <button class="btn btn-warning m-3" onclick="display('sectionhomepageBooks')">back</button>
+                    <button class="btn btn-primary m-3">Buy Now</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="sectionharrypage">
+        <div class="detail-page">
+            <div class="detail-page-apj">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/harrypotter-img.png" class="apj" />
+                <h1 class="wings-heading">Harry Potter</h1>
+                <p class="bio-description1">by J.K.Rowling</p>
+                <p1 class="apj-about">Every common man who by his sheerr grift and hard work acheives success shoulld share
+                    his story his with the rest for they may find inspiration and strngth to go
+                    on,in his story .the 'Wings of fire' is one of the such autobiography by vistionary scientista Dr.APJ Abdul Kalam</p1>
+                <div class="d-flex flex-row justify-content-center">
+                    <button class="btn btn-warning m-3" onclick="display('sectionhomepageBooks')">back</button>
+                    <button class="btn btn-primary m-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionVrHeadset">
+        <div class="pt-3 pb-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="heading">Products</h1>
+                    </div>
+                    <div class="col-12 pb-3 col-md-6">
+                        <div class="bg-container-vr d-flex flex-column justify-content-end text-left p-3">
+                            <h1 class="sub-heading">VR Headset</h1>
+                            <h1 class="amount">Rs 75,000</h1>
+                            <button class="button">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="col-12 pb-3 col-md-6">
+                        <div class="bg-container-vr2 d-flex flex-column justify-content-end text-left p-3">
+                            <h1 class="sub-heading">VR Headset and Two Touch Controllers</h1>
+                            <h1 class="amount">Rs 90,000</h1>
+                            <button class="button">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class=" col-12 d-flex flex-row justify-content-end ">
+                        <button onclick="display('sectionFirstPage')" class="btn btn-primary">back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionWikipedia">
+        <div class="wiki-search-container">
+            <div class="main-container">
+                <div class="wiki-search-header text-center">
+                    <img class="wiki-logo" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/wiki-logo-img.png" />
+                    <br />
+                    <input placeholder="Type a keyword and press Enter to search" type="search" class="search-input w-100" id="searchInput" />
+                </div>
+                <div class="d-none" id="spinner">
+                    <div class="d-flex justify-content-center">
+                        <div class="spinner-border" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+
+                <div class="text-right">
+                    <button class="save-draft-button " onclick="display('sectionHomePage')">Back</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+
+</html>
